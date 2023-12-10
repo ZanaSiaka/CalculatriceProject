@@ -11,29 +11,29 @@
     <div class="calculatrice">
         <form>
             <div class="result">
-                <input type="text">
+                <input type="text" name="result">
             </div>
 
             <div class="prompt">
-                <button class="calcul">AC</button>
-                <button class="calcul">DE</button>
-                <button class="calcul">.</button>
-                <button class="calcul">/</button>
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button class="calcul">*</button>
-                <button>6</button>
-                <button>4</button>
-                <button>5</button>
-                <button class="calcul">-</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button class="calcul">+</button>
-                <button>0</button>
-                <button>00</button>
-                <button class="egal calcul">=</button>
+                <button class="calcul" onclick=" result.value = ' ' " type="button">AC</button>
+                <button class="calcul" onclick="result.value = result.value.toString().slice(0, -1) " type="button">DE</button>
+                <button class="calcul" onclick=" result.value += '.' " type="button">.</button>
+                <button class="calcul" onclick=" result.value += '/' " type="button">/</button>
+                <button onclick=" result.value += '7' " type="button">7</button>
+                <button type="button" onclick=" result.value += '8' ">8</button>
+                <button type="button" onclick=" result.value += '9' ">9</button>
+                <button class="calcul" onclick=" result.value += '*' " type="button">*</button>
+                <button type="button" onclick=" result.value += '4' ">4</button>
+                <button type="button" onclick=" result.value += '5' ">5</button>
+                <button type="button" onclick=" result.value += '6' ">6</button>
+                <button class="calcul" onclick=" result.value += '-' " type="button">-</button>
+                <button type="button" onclick=" result.value += '1' ">1</button>
+                <button type="button" onclick=" result.value += '2' ">2</button>
+                <button type="button" onclick=" result.value += '3' ">3</button>
+                <button class="calcul" onclick=" result.value += '+' " type="button">+</button>
+                <button type="button" onclick=" result.value += '00' ">00</button>
+                <button type="button" onclick=" result.value += '0' ">0</button>
+                <button class="egal calcul" type="button" onclick="result.value = eval(result.value)">=</button>
             </div>
         </form>
     </div>
